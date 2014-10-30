@@ -8,7 +8,8 @@ angular.module('colorpicker', ['spectrumcolorpicker'])
       return {
           restrict: 'EA',
           scope: {
-              ngModel: '='
+              ngModel: '=',
+              approvalColors: '='
           },
           link: function (scope, $element) {
 
@@ -56,7 +57,7 @@ angular.module('colorpicker', ['spectrumcolorpicker'])
                         '<h1>Header</h1>' + 
                     '</div>' + 
                     '<div class="modal-body">' + 
-                        '<spectrum colorselected="ngModel" set-color="setColor" flat="true" show-palette="true"></spectrum>' +
+                        '<spectrum colorselected="ngModel" set-color="setColor" flat="true" show-palette="true" show-palette-only="approvalColors && true" palette="approvalColors"></spectrum>' +
                     '</div>' + 
                     '<div class="right">' + 
                         '<a class="btn" href="#" ng-click="cancelAndClose()">Cancel</a>' + 

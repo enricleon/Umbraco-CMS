@@ -12,7 +12,9 @@ angular.module('spectrumcolorpicker', [])
               colorselected: '=',
               setColor: '=',
               flat: '=',
-              showPalette: '='
+              showPalette: '=',
+              palette: '=',
+              showPaletteOnly: '='
           },
           link: function (scope, $element) {
 
@@ -25,9 +27,10 @@ angular.module('spectrumcolorpicker', [])
                   showAlpha: true,
                   showInput: true,
                   flat: scope.flat,
-                  localStorageKey: "spectrum.panel",
+                  localStorageKey: scope.showPaletteOnly ? "" : "spectrum.panel",
                   showPalette: scope.showPalette,
-                  palette: [],
+                  showPaletteOnly: scope.showPaletteOnly,
+                  palette: scope.palette || [],
                   change: function (color) {
 
                       if (color) {

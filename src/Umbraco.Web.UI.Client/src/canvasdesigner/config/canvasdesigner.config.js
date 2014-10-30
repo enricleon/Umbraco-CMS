@@ -24,7 +24,8 @@ var canvasdesignerConfig = {
                 category: "Font",
                 name: "Font Color (main)",
                 css: "color",
-                schema: "body, h1, h2, h3, h4, h5, h6, h7, #nav li a"
+                schema: "body, h1, h2, h3, h4, h5, h6, h7, #nav li a",
+                palette: ['#b0b0b0', '#ccc', 'rgb(13, 55, 216)']
             },
             {
                 type: "color",
